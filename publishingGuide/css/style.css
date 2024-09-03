@@ -47,6 +47,8 @@ input:read-only{background:#e4e4e4; user-select:none}
 table{width:100%;}
 table th, table td{border:1px solid #414141;color:#e5e5e5;padding:8px}
 table th{background:#292929;}
+table a{color:#fff;text-decoration: underline;}
+table a:hover{color:#147350;text-decoration:underline;}
 
 /* 보드 박스 디자인 공통 */
 .board{padding:20px;border:1px solid #424242;background:#ffffff36;border-radius:5px;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
