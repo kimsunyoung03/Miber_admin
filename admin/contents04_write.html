@@ -170,33 +170,12 @@ $('.adm_nav_depth1').click(function() {
     <div class="mb_15">
         <p class="label_name required">이미지</p>
         <label class="imgfile">
+                <i class="fa fa-close img_close" aria-hidden="true"></i>
             <i class="fa fa-plus" aria-hidden="true"></i>
             <input name="imgfile" type="file" accept=".png, .jpg" required>
         </label>
         <p class="comment"> * 1000×1000 px <br/>* jpg, png 파일만 등록가능</p>
     </div>
-        <script>
-            $('input[name="imgfile"]').on('change', function(event) {
-            const input = event.target;
-            const label = $(input).parent();
-            const file = input.files[0];
-
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    const img = $('<img>').attr('src', e.target.result);
-                    // 기존의 이미지가 있으면 제거
-                    label.find('img').remove();
-                    // 새 이미지를 추가
-                    label.append(img);
-                    // 아이콘지우기
-                    label.find('i').hide();
-                };
-                reader.readAsDataURL(file);
-            }
-            });
-        </script>
-
         <p class="label_name required">진열상태</p>
         <ul class="filter_select3 mb_20">
             <li class="on"><label><input type="hidden" value="진열" checked>진열</label></li>

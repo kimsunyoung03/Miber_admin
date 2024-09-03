@@ -32,46 +32,6 @@ $(document).ready(function () {
             $(this).addClass('on');
         });
     });
-    ////////////////////////////////////////////////
-
-
-    ////////////////////////////////////////////////
-    // 이미지추가 제거 관련 스크립트
-    $('.remove_img').hide();
-    $('input[name="imgfile"]').on('change', function(event) {
-    const input = event.target;
-    const label = $(input).parent();
-    const file = input.files[0];
-    if (file) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            const img = $('<img>').attr('src', e.target.result);
-            // 기존의 이미지가 있으면 제거
-            label.find('img').remove();
-            // 새 이미지를 추가
-            label.append(img);
-            // 아이콘지우기
-            label.find('.fa-plus').hide();
-            label.find('.remove_img').show();
-        };
-        reader.readAsDataURL(file);
-    }
-    });
-    // remove_img 아이콘 클릭 시 이미지 및 아이콘 제거
-    $(document).on('click', '.remove_img', function(event) {
-        event.preventDefault();
-        const label = $(this).parent();
-        // 이미지 제거
-        label.find('img').remove();
-        // 파일 입력 초기화
-        label.find('input[name="imgfile"]').val('');
-        // plus 아이콘 보이기
-        label.find('.fa-plus').show();
-        // remove_img 아이콘 숨기기
-        $(this).hide();
-    });
-
-    
 
 });
 

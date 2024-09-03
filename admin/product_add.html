@@ -322,6 +322,7 @@ $('.adm_nav_depth1').click(function() {
             <div>
                 <p class="label_name2 required">대표 이미지</p>
                 <label class="imgfile">
+                <i class="fa fa-close img_close" aria-hidden="true"></i>
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <input name="imgfile" type="file" accept=".png, .jpg" required>
                 </label>
@@ -329,6 +330,7 @@ $('.adm_nav_depth1').click(function() {
             <div>
                 <p class="label_name2">추가 이미지1</p>
                 <label class="imgfile">
+                <i class="fa fa-close img_close" aria-hidden="true"></i>
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <input name="imgfile" type="file" accept=".png, .jpg">
                 </label>
@@ -336,6 +338,7 @@ $('.adm_nav_depth1').click(function() {
             <div>
                 <p class="label_name2">추가 이미지2</p>
                 <label class="imgfile">
+                <i class="fa fa-close img_close" aria-hidden="true"></i>
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <input name="imgfile" type="file" accept=".png, .jpg">
                 </label>
@@ -343,6 +346,7 @@ $('.adm_nav_depth1').click(function() {
             <div>
                 <p class="label_name2">추가 이미지3</p>
                 <label class="imgfile">
+                <i class="fa fa-close img_close" aria-hidden="true"></i>
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <input name="imgfile" type="file" accept=".png, .jpg">
                 </label>
@@ -350,6 +354,7 @@ $('.adm_nav_depth1').click(function() {
             <div>
                 <p class="label_name2">추가 이미지4</p>
                 <label class="imgfile">
+                <i class="fa fa-close img_close" aria-hidden="true"></i>
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <input name="imgfile" type="file" accept=".png, .jpg">
                 </label>
@@ -357,6 +362,7 @@ $('.adm_nav_depth1').click(function() {
             <div>
                 <p class="label_name2">추가 이미지5</p>
                 <label class="imgfile">
+                <i class="fa fa-close img_close" aria-hidden="true"></i>
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <input name="imgfile" type="file" accept=".png, .jpg">
                 </label>
@@ -364,31 +370,11 @@ $('.adm_nav_depth1').click(function() {
             <div>
                 <p class="label_name2">추가 이미지6</p>
                 <label class="imgfile">
+                <i class="fa fa-close img_close" aria-hidden="true"></i>
                     <i class="fa fa-plus" aria-hidden="true"></i>
                     <input name="imgfile" type="file" accept=".png, .jpg">
                 </label>
             </div>
-            
-            <script>
-                $('input[name="imgfile"]').on('change', function(event) {
-                const input = event.target;
-                const label = $(input).parent();
-                const file = input.files[0];
-                if (file) {
-                    const reader = new FileReader();
-                    reader.onload = function(e) {
-                        const img = $('<img>').attr('src', e.target.result);
-                        // 기존의 이미지가 있으면 제거
-                        label.find('img').remove();
-                        // 새 이미지를 추가
-                        label.append(img);
-                        // 아이콘지우기
-                        label.find('i').hide();
-                    };
-                    reader.readAsDataURL(file);
-                }
-                });
-            </script>
             
         </div>
         <p class="comment"> * 1000×1000 px</p>
