@@ -220,18 +220,18 @@
               previewStyle: 'vertical',            // 마크다운 프리뷰 스타일 (tab || vertical)
 
           });
-          $('.toggle_wrap').on('click', function() {
-                var content = $(this).find('div[id^="content"]');
-                
-                // 현재 클릭된 토글을 제외한 다른 모든 콘텐츠를 닫기
-                $('.toggle_wrap').not($(this)).removeClass('active').find('div[id^="content"]').slideUp();
-                $('.toggle_wrap').not($(this)).find('i').removeClass('fa-sort-asc').addClass('fa-sort-desc');
-                
-                // 클릭된 토글의 콘텐츠를 열기/닫기
-                $(this).toggleClass('active');
-                content.slideToggle();
-                $(this).find('i').toggleClass('fa-sort-desc fa-sort-asc');
-            });
+          $('.tit_area').on('click', function() {
+            var content = $(this).closest('.toggle_wrap').find('div[id^="content"]');
+            
+            // 현재 클릭된 토글을 제외한 다른 모든 콘텐츠를 닫기
+            $('.toggle_wrap').not($(this).closest('.toggle_wrap')).removeClass('active').find('div[id^="content"]').slideUp();
+            $('.toggle_wrap').not($(this).closest('.toggle_wrap')).find('i').removeClass('fa-sort-asc').addClass('fa-sort-desc');
+            
+            // 클릭된 토글의 콘텐츠를 열기/닫기
+            $(this).closest('.toggle_wrap').toggleClass('active');
+            content.slideToggle();
+            $(this).find('i').toggleClass('fa-sort-desc fa-sort-asc');
+        });
     </script>
     <label>
         <p class="label_name required">리뷰 적립금 설정</p>
