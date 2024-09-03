@@ -49,6 +49,9 @@ table th, table td{border:1px solid #414141;color:#e5e5e5;padding:8px}
 table th{background:#292929;}
 table a{color:#fff;text-decoration: underline;}
 table a:hover{color:#147350;text-decoration:underline;}
+.space{background:#333333 !important;height:36px;}
+.count{text-align:center;}
+
 
 /* 보드 박스 디자인 공통 */
 .board{padding:20px;border:1px solid #424242;background:#ffffff36;border-radius:5px;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;}
@@ -83,7 +86,9 @@ table a:hover{color:#147350;text-decoration:underline;}
 .board_chart{display:flex;justify-content:center;align-items:center;height:320px !important;}
 /*-- 어드민 상단 --*/
 #admin_top_area{width:100%;padding:12px 40px;text-align:right;background:#292929;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;position:fixed;top:0;left:0;z-index:99;}
+#admin_top_area button{float:right;color:#ccc;background:#3D3935}
 .user_area{display:flex;justify-content: flex-end;align-items:center;gap: 8px;font-size: 14px;}
+
 /*-- 어드민 사이드 --*/
 #admin_side_area{width:250px;;height:100vh;position:fixed;top:0;left:0;background:#0e0e0e;box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;z-index:99;}
 .logo_area{display:flex;justify-content:center;align-items:stretch;flex-direction:column;padding:40px;border-bottom:1px solid #161616}
